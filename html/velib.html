@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link href="../css/velib.css" rel="stylesheet" type="text/css" />
+        <title>Sélection Station Vélib.html</title>
+    </head>
+
+    <body>
+
+        <h1>Sélection station Vélib</h1>
+
+        
+        <p id="pMessage"></p>
+        
+        <div id="selection">            
+            <!--<p id="pListes">-->
+            <fieldset id="parAdresse">
+                <legend>Recherche par adresse</legend>
+                <input type="text" id="saisieAdresse" name="saisieAdresse"/>
+                <br>
+                <br>
+                <select id="listeStationsVelibParAdresse" name="listeStationsVelibParAdresse" size="10"></select>            
+            </fieldset>
+
+            <!--&nbsp;-->
+
+            <fieldset id="stationsProches">
+                <legend>Stations proches de votre position</legend>
+                <input type="button" value="Stations proches" id="btStationsProches" name="btStationsProches" />                 
+                <br>
+                <br>
+                <select id="listeStationsVelibProches" name="listeStationsVelibProches" size="10"></select> 
+            </fieldset>
+            <!--</p>-->
+
+            <fieldset id="pLabelMessage">
+                <legend>Informations concernant la station</legend>
+                <label id="lblMessage"></label>
+            </fieldset>
+        </div>
+
+
+        <h3>Map Dynamique HTML5</h3>
+
+        <input type="hidden" id="ithLat" />
+        <input type="hidden" id="ithLng" />
+
+        <p class="nettoyeur">
+            <input type="button" value="Afficher Map" id="btAfficherMap" />
+        </p>
+        <div id="divMap"></div> 
+
+
+        <script src="http://maps.google.com/maps/api/js?key=AIzaSyC7gz5r8XaR2-JXUyAu1L8RS5Wa9McL-Tk"></script>
+        <script src="../jQuery/jquery.js"></script>
+        <script src="../js/velib.js"></script>
+    </body>
+</html>
